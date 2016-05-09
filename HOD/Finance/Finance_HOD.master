@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Finance_HOD.master.cs" Inherits="HOD_Finance_Finance_HOD" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Big Business 2.0 by FCT</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../design/style.css" />
+<script type="text/javascript" src="../../Scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery.dropotron-1.0.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery.slidertron-1.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#menu > ul').dropotron({
+            mode: 'fade',
+            globalOffsetY: 11,
+            offsetY: -15
+        });
+        //        $('#slider').slidertron({
+        //            viewerSelector: '.viewer',
+        //            indicatorSelector: '.indicator span',
+        //            reelSelector: '.reel',
+        //            slidesSelector: '.slide',
+        //            speed: 'slow',
+        //            advanceDelay: 4000
+        //        });
+    });
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+    <div id="wrapper">
+	<div id="header">
+		<div id="logo">
+        
+			<h1><a href="#">Money Management System</a></h1>
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+        <li><a href="Default.aspx">Home</a></li>
+			<li class="first">
+                
+				<span class="opener">Leave<b></b></span>
+				<ul>
+					
+                    <li><a href="Apply For Leave.aspx">Apply for Leave</a></li>										
+                   <li><a href="Leave Status.aspx">Leave Status</a></li>					
+                   <li><a href="View Leave Request.aspx">Leave Request</a></li>
+				</ul>
+			</li>			
+			
+			 <li><a href="Profile Update.aspx">View Profile</a></li>
+             <li class="last"><a href="View Employee Detail.aspx">View Employee</a></li>
+             <li><asp:Button ID="btnProceed" runat="server" Text="log out" 
+                   onclick="btnProceed_Click" BackColor="#009999" BorderColor="#009999" 
+                     BorderWidth="0px" Font-Size="Large" ForeColor="White" /></li>
+            <asp:Label ID="lblattdate" runat="server" Text="Label" Visible="False"/>   
+		</ul>
+		<br class="clearfix" />
+
+	</div>
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    	<div id="page-bottom">
+		<div id="page-bottom-content">
+			<h3>Basic Money Managemnt System</h3>
+			<p>
+				Money Management System....have a good future in many stream of business which detalis are provided in Product menu on a main page.So,kindly visit that menu for further information about money management system. 
+			</p>
+		</div>
+		<div id="page-bottom-sidebar">
+			<h3>Services</h3>
+			<ul class="list">
+				<li class="first">Vision</li>
+				<li>Mission</li>
+				<li class="last">Quality Policy</li>
+			</ul>
+		</div>
+		<br class="clearfix" />
+	</div>
+</div>
+<div id="footer">
+	Copyright (c) 2013. All rights reserved. Design by Brijesh,Nirav,Nisarg.
+</div>
+
+    </div>
+
+    </form>
+</body>
+</html>
